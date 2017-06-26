@@ -381,7 +381,7 @@ user_pref("browser.sessionhistory.max_entries", 10);
  * [1] https://dbaron.org/mozilla/visited-privacy
  * [2] https://bugzilla.mozilla.org/show_bug.cgi?id=147777
  * [3] https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector ***/
-user_pref("layout.css.visited_links_enabled", false);
+user_pref("layout.css.visited_links_enabled", true);
 /* 0806: disable displaying javascript in history URLs - SECURITY ***/
 user_pref("browser.urlbar.filter.javascript", true);
 /* 0807: disable search bar LIVE search suggestions - PRIVACY
@@ -523,15 +523,15 @@ user_pref("browser.cache.frecency_experiment", -1);
 /* 1020: disable the Session Restore service completely
  * [WARNING] [SETUP] This also disables the "Recently Closed Tabs" feature
  * It does not affect "Recently Closed Windows" or any history. ***/
-user_pref("browser.sessionstore.max_tabs_undo", 0);
-user_pref("browser.sessionstore.max_windows_undo", 0);
+//user_pref("browser.sessionstore.max_tabs_undo", 0);
+//user_pref("browser.sessionstore.max_windows_undo", 0);
 /* 1021: disable storing extra session data
  * extra session data contains contents of forms, scrollbar positions, cookies and POST data
  * define on which sites to save extra session data:
  * 0=everywhere, 1=unencrypted sites, 2=nowhere ***/
 user_pref("browser.sessionstore.privacy_level", 2);
 /* 1022: disable resuming session from crash [SETUP] ***/
-user_pref("browser.sessionstore.resume_from_crash", false);
+//user_pref("browser.sessionstore.resume_from_crash", false);
 /* 1023: set the minimum interval between session save operations - increasing it
  * can help on older machines and some websites, as well as reducing writes, see [1]
  * Default is 15000 (15 secs). Try 30000 (30sec), 60000 (1min) etc
@@ -750,12 +750,12 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
  * [SETTING] Options>Fonts & Colors>Advanced>Serif|Sans-serif|Monospace
  * [SETUP] These are optional, comment out if you do not require them
  * [NOTE] Been using this for 18 months, it really grows on you ***/
-user_pref("font.name.serif.x-unicode", "Georgia");
-user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
-user_pref("font.name.sans-serif.x-unicode", "Arial");
-user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
-user_pref("font.name.monospace.x-unicode", "Lucida Console");
-user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
+//user_pref("font.name.serif.x-unicode", "Georgia");
+//user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
+//user_pref("font.name.sans-serif.x-unicode", "Arial");
+//user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
+//user_pref("font.name.monospace.x-unicode", "Lucida Console");
+//user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
 /* 1405: disable WOFF2 (Web Open Font Format) ***/
 user_pref("gfx.downloadable_fonts.woff2.enabled", false);
 /* 1406: disable CSS Font Loading API
@@ -1012,14 +1012,14 @@ user_pref("dom.disable_beforeunload", true);
 user_pref("ghacks_user.js.parrot", "2300 syntax error: the parrot's off the twig!");
 /* 2301: disable workers
  * [NOTE] CVE-2016-5259, CVE-2016-2812, CVE-2016-1949, CVE-2016-5287 (fixed) ***/
-user_pref("dom.workers.enabled", false);
+//user_pref("dom.workers.enabled", false);
 /* 2302: disable service workers
  * Service workers essentially act as proxy servers that sit between web apps, and the browser
  * and network, are event driven, and can control the web page/site it is associated with,
  * intercepting and modifying navigation and resource requests, and caching resources.
  * [NOTE] Service worker APIs are hidden (in Firefox) and cannot be used when in PB mode.
  * [NOTE] Service workers only run over HTTPS. Service Workers have no DOM access. ***/
-user_pref("dom.serviceWorkers.enabled", false);
+//user_pref("dom.serviceWorkers.enabled", false);
 /* 2303: disable service workers' cache and cache storage ***/
 user_pref("dom.caches.enabled", false);
 /* 2304: disable web notifications
@@ -1043,7 +1043,7 @@ user_pref("ghacks_user.js.parrot", "2400 syntax error: the parrot's kicked the b
  * this applies to onCut, onCopy, onPaste events - i.e you have to interact with
  * the website for it to look at the clipboard
  * [1] http://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/ ***/
-user_pref("dom.event.clipboardevents.enabled", false);
+//user_pref("dom.event.clipboardevents.enabled", false);
 /* 2403: disable clipboard commands (cut/copy) from "non-privileged" content (FF41+)
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1170911 ***/
@@ -1311,7 +1311,7 @@ user_pref("network.jar.block-remote-files", true);
  * in such a way that it is forbidden to run external applications.
  * [SETUP] This may interfere with some users' workflow or methods
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1281959 ***/
-user_pref("browser.download.forbid_open_with", true);
+//user_pref("browser.download.forbid_open_with", true);
 /* 2663: disable MathML (Mathematical Markup Language) (FF51+)
  * [TEST] http://browserspy.dk/mathml.php
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1173199 ***/
@@ -1474,7 +1474,7 @@ user_pref("ghacks_user.js.parrot", "2700 syntax error: the parrot's joined the b
  * You can set exceptions under site permissions or use an extension (eg Cookie Controller)
  * 0=allow all 1=allow same host 2=disallow all 3=allow 3rd party if it already set a cookie
  * [SETTING] Options>Privacy>History>Custom Settings>Accept cookies from sites ***/
-user_pref("network.cookie.cookieBehavior", 2);
+//user_pref("network.cookie.cookieBehavior", 2);
 /* 2702: set third-party cookies (if enabled, see above pref) to session-only
  * [1] https://feeding.cloud.geek.nz/posts/tweaking-cookies-for-privacy-in-firefox/
  * [2] http://kb.mozillazine.org/Network.cookie.thirdparty.sessionOnly ***/
@@ -1525,7 +1525,7 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
  * However, this may not always be the case. The interface combines and syncs these
  * prefs when set from there, and the sanitize code may change at any time ***/
 user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("privacy.clearOnShutdown.cookies", true);
 user_pref("privacy.clearOnShutdown.downloads", true); // see note above
 user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
 user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
