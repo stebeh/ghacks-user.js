@@ -1531,7 +1531,7 @@ user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
 user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
 user_pref("privacy.clearOnShutdown.offlineApps", true); // Offline Website Data
 user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
-user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
+user_pref("privacy.clearOnShutdown.siteSettings", true); // Site Preferences
 /* 2804: set what history items to clear with Ctrl-Shift-Del (to match above)
  * This dialog can also be accessed from the menu History>Clear Recent History
  * [NOTE] Regardless of what you set privacy.cpd.downloads to, as soon as the dialog
