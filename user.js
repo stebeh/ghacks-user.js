@@ -395,8 +395,8 @@ user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true); // (FF41+)
 /* 0809: disable location bar suggesting "preloaded" top websites (FF54+)
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1211726 ***/
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
-/* 0850a: disable location bar autocomplete [controlled by 0850b]
-   // user_pref("browser.urlbar.autocomplete.enabled", false);
+/* 0850a: disable location bar autocomplete [controlled by 0850b] */
+user_pref("browser.urlbar.autocomplete.enabled", false);
 /* 0850b: disable location bar suggestion types [controls 0850a]
  * [SETTING] Options>Privacy>Location Bar>When using the location bar, suggest
  * [NOTE] If any of these are true, 0850a will be FORCED to true
@@ -412,7 +412,7 @@ user_pref("browser.urlbar.suggest.openpage", false);
  * and this does not affect the search by search engine suggestion (see 0808)
  * [USAGE] This setting is only useful if you want to enable search engine keywords
  * (i.e at least one of 0850b must be true) but you want to *limit* suggestions shown ***/
-user_pref("browser.urlbar.maxRichResults", 0);
+   // user_pref("browser.urlbar.maxRichResults", 0);
 /* 0850d: disable location bar autofill
  * [1] http://kb.mozillazine.org/Inline_autocomplete ***/
 user_pref("browser.urlbar.autoFill", false);
