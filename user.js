@@ -412,7 +412,7 @@ user_pref("browser.urlbar.suggest.openpage", false);
  * and this does not affect the search by search engine suggestion (see 0808)
  * [USAGE] This setting is only useful if you want to enable search engine keywords
  * (i.e at least one of 0850b must be true) but you want to *limit* suggestions shown ***/
-   // user_pref("browser.urlbar.maxRichResults", 0);
+user_pref("browser.urlbar.maxRichResults", 0);
 /* 0850d: disable location bar autofill
  * [1] http://kb.mozillazine.org/Inline_autocomplete ***/
 user_pref("browser.urlbar.autoFill", false);
