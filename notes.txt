@@ -1,0 +1,6 @@
+My own approach to the demise of RAS has been:
+
+    to use ghacks-user.js to control prefs (can't say enough how comprehensively awesome this is),
+    to use uBlock Origin (hands down my fav extension) to cut down on scripting (denied everywhere by default),
+    to use CanvasBlocker [https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/] to deal with canvas fingerprinting, and
+    to allow Firefox's privacy.resistFingerprinting config along with the ongoing implementation of the Tor Uplift project to take care of the spoofing and fingerprinting protection that RAS used to handle
