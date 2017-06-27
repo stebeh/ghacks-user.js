@@ -1012,14 +1012,14 @@ user_pref("dom.disable_beforeunload", true);
 user_pref("ghacks_user.js.parrot", "2300 syntax error: the parrot's off the twig!");
 /* 2301: disable workers
  * [NOTE] CVE-2016-5259, CVE-2016-2812, CVE-2016-1949, CVE-2016-5287 (fixed) ***/
-//user_pref("dom.workers.enabled", false);
+user_pref("dom.workers.enabled", false);
 /* 2302: disable service workers
  * Service workers essentially act as proxy servers that sit between web apps, and the browser
  * and network, are event driven, and can control the web page/site it is associated with,
  * intercepting and modifying navigation and resource requests, and caching resources.
  * [NOTE] Service worker APIs are hidden (in Firefox) and cannot be used when in PB mode.
  * [NOTE] Service workers only run over HTTPS. Service Workers have no DOM access. ***/
-//user_pref("dom.serviceWorkers.enabled", false);
+user_pref("dom.serviceWorkers.enabled", false);
 /* 2303: disable service workers' cache and cache storage ***/
 user_pref("dom.caches.enabled", false);
 /* 2304: disable web notifications
