@@ -1055,7 +1055,8 @@ user_pref("dom.allow_cut_copy", false); // (hidden pref)
  * [WARNING] [SETUP] If set as false (disabled), this WILL break some [old] add-ons and DOES
  * break a lot of sites' functionality. Applies to websites, add-ons and session data.
  * [1] https://addons.mozilla.org/en-US/firefox/addon/disable-indexeddb/ ***/
-user_pref("dom.indexedDB.enabled", false);
+// breaks here maps if false
+user_pref("dom.indexedDB.enabled", true);
 /* 2410: disable User Timing API
  * [1] https://trac.torproject.org/projects/tor/ticket/16336 ***/
 user_pref("dom.enable_user_timing", false);
