@@ -1256,7 +1256,7 @@ user_pref("network.http.spdy.enabled.http2", false);
  * If you think a particular external app is more secure...
  *   [NOTE]
  * 1. See 2662 2: JS can still force a pdf to open in-browser by bundling it's own code (rare) ***/
-user_pref("pdfjs.disabled", false);
+user_pref("pdfjs.disabled", true);
 /* 2618: enforce the proxy server to do any DNS lookups when using SOCKS
  * eg in TOR, this stops your local DNS server from knowing your Tor destination
  * as a remote Tor node will handle the DNS request
