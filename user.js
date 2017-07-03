@@ -807,7 +807,7 @@ user_pref("network.http.referer.trimmingPolicy", 0);
 /* 1603: CROSS ORIGIN: control when to send a referer [SETUP]
  * 0=always (default), 1=only if base domains match, 2=only if hosts match
  * [NOTE] 1=less breakage, possible leakage 2=less leakage, more breakage ***/
-user_pref("network.http.referer.XOriginPolicy", 1);
+user_pref("network.http.referer.XOriginPolicy", 0);
 /* 1604: CROSS ORIGIN: control the amount of information to send (FF52+)
  * 0=send full URI (default) 1=scheme+host+path+port 2=scheme+host+port ***/
 user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
