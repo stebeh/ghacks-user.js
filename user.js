@@ -295,9 +295,12 @@ user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", ""); //
     as it offers more comprehensive and specialized lists. It also allows per domain control. ***/
 /* 0420: enable Tracking Protection in all windows
  * [1] https://wiki.mozilla.org/Security/Tracking_protection
- * [2] https://support.mozilla.org/en-US/kb/tracking-protection-firefox ***/
+ * [2] https://support.mozilla.org/en-US/kb/tracking-protection-firefox
+ default is true (tested in FF52ESR) ***/
 user_pref("privacy.trackingprotection.pbmode.enabled", true);
-user_pref("privacy.trackingprotection.enabled", true);
+/* default is false (tested in FF52ESR) 
+  if set to true, header wil contain DNT flag! */
+user_pref("privacy.trackingprotection.enabled", false);
 /* 0421: enable more Tracking Protection choices under Options>Privacy>Use Tracking Protection
  * Displays three choices: "Always", "Only in private windows", "Never" ***/
 user_pref("privacy.trackingprotection.ui.enabled", true);
