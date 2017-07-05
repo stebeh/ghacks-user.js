@@ -833,6 +833,7 @@ user_pref("network.http.referer.hideOnionSource", true);
  * [SETTING] Options>Privacy>Tracking>Request that sites not track you
  * [NOTE] If you use NoScript MAKE SURE to set the pref noscript.doNotTrack.enabled to match ***/
 user_pref("privacy.donottrackheader.enabled", false);
+user_pref("noscript.doNotTrack.enabled", false);
 
 /*** 1700: CONTAINERS [SETUP]
      [1] https://support.mozilla.org/kb/containers-experiment
