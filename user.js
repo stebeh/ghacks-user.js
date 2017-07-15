@@ -295,14 +295,15 @@ user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", ""); //
     as it offers more comprehensive and specialized lists. It also allows per domain control. ***/
 /* 0420: enable Tracking Protection in all windows
  * [1] https://wiki.mozilla.org/Security/Tracking_protection
- * [2] https://support.mozilla.org/en-US/kb/tracking-protection-firefox
+ * [2] https://support.mozilla.org/en-US/kb/tracking-protection-firefox 
  default is true (tested in FF52ESR) ***/
 user_pref("privacy.trackingprotection.pbmode.enabled", true);
 /* default is false (tested in FF52ESR) 
   if set to true, header wil contain DNT flag! */
 user_pref("privacy.trackingprotection.enabled", false);
 /* 0421: enable more Tracking Protection choices under Options>Privacy>Use Tracking Protection
- * Displays three choices: "Always", "Only in private windows", "Never" ***/
+ * Displays three choices: "Always", "Only in private windows", "Never" 
+ default is false (tested in FF52ESR) ***/
 user_pref("privacy.trackingprotection.ui.enabled", true);
 /* 0422: enable "basic" or "strict" tracking protecting list - ONLY USE ONE!
  * [SETTING] Options>Privacy>Use Tracking Protection>Change Block List ***/
@@ -779,7 +780,6 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
  * privacy.resistFingerprinting (see 2699) may cover this, and 1401 can be relaxed.
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1121643 ***/
 user_pref("font.system.whitelist", "Arial, Arial Black, Calibri, Cambria, Cambria Math, Comic Sans MS, Consolas, Courier, Courier New, Georgia, Helvetica, Impact, Lucida Console, Lucida Sans Unicode, Microsoft Sans Serif, MS Gothic, MS PGothic, MS Sans Serif, MS Serif, Palatino Linotype, Segoe Print, Segoe Script, Segoe UI, Segoe UI Light, Segoe UI Semibold, Segoe UI Symbol, Tahoma, Times, Times New Roman, Trebuchet MS, Verdana, Wingdings, Aharoni, Andalus, Angsana New, AngsanaUPC, Aparajita, Arabic Typesetting, Batang, BatangChe, Browallia New, BrowalliaUPC, Candara, Constantia, Corbel, Cordia New, CordiaUPC, DaunPenh, David, DFKai-SB, DilleniaUPC, DokChampa, Dotum, DotumChe, Ebrima, EucrosiaUPC, Euphemia, FangSong, Fixedsys, FrankRuehl, FreesiaUPC, Gabriola, Gautami, Gisha, Gulim, GulimChe, Gungsuh, GungsuhChe, HELV, IrisUPC, Iskoola Pota, JasmineUPC, KaiTi, Kalinga, Kartika, Khmer UI, KodchiangUPC, Kokila, Lao UI, Latha, Leelawadee, Levenim MT, LilyUPC, Malgun Gothic, Mangal, Marlett, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft New Tai Lue, Microsoft PhagsPa, Microsoft Tai Le, Microsoft Uighur, Microsoft YaHei, Microsoft Yi Baiti, MingLiU, MingLiU_HKSCS, MingLiU_HKSCS-ExtB, MingLiU-ExtB, Miriam, Miriam Fixed, Modern, Mongolian Baiti, MoolBoran, MS Mincho, MS PMincho, MS UI Gothic, MV Boli, Narkisim, NSimSun, Nyala, Plantagenet Cherokee, PMingLiU, PMingLiU-ExtB, Raavi, Rod, Roman, Sakkal Majalla, Script, Shonar Bangla, Shruti, SimHei, Simplified Arabic, Simplified Arabic Fixed, SimSun, SimSun-ExtB, Small Fonts, Sylfaen, System, Terminal, Traditional Arabic, Tunga, Utsaah, Vani, Vijaya, Vrinda"); // (hidden pref)
-
 /*** 1600: HEADERS / REFERERS [SETUP]
      Except for DNT (Do Not Track), referers are best controlled by an extension.
      It is important to realize that it is *cross domain* referers that need
@@ -1084,7 +1084,7 @@ user_pref("dom.idle-observers-api.enabled", false);
  * [NOTE] about:permissions is no longer available since FF46 but you can still override
  * individual domains: use info icon in urlbar etc or right click on a web page>view page info
  * set to false=block, set to true=ask ***/
-user_pref("full-screen-api.enabled", false);
+user_pref("full-screen-api.enabled", true);
 /* 2420: disable support for asm.js ( http://asmjs.org/ )
  * [1] https://www.mozilla.org/en-US/security/advisories/mfsa2015-29/
  * [2] https://www.mozilla.org/en-US/security/advisories/mfsa2015-50/
@@ -1479,7 +1479,7 @@ user_pref("ghacks_user.js.parrot", "2700 syntax error: the parrot's joined the b
  * You can set exceptions under site permissions or use an extension (eg Cookie Controller)
  * 0=allow all 1=allow same host 2=disallow all 3=allow 3rd party if it already set a cookie
  * [SETTING] Options>Privacy>History>Custom Settings>Accept cookies from sites ***/
-//user_pref("network.cookie.cookieBehavior", 2);
+user_pref("network.cookie.cookieBehavior", 0);
 /* 2702: set third-party cookies (if enabled, see above pref) to session-only
  * [1] https://feeding.cloud.geek.nz/posts/tweaking-cookies-for-privacy-in-firefox/
  * [2] http://kb.mozillazine.org/Network.cookie.thirdparty.sessionOnly ***/
@@ -1487,7 +1487,7 @@ user_pref("network.cookie.thirdparty.sessionOnly", true);
 /* 2703: set cookie lifetime policy
  * 0=until they expire (default), 2=until you close Firefox, 3=for n days (see next pref)
  * [SETTING] Options>Privacy>History>Custom Settings>Accept cookies from sites>Keep until ***/
-   // user_pref("network.cookie.lifetimePolicy", 0);
+user_pref("network.cookie.lifetimePolicy", 0);
 /* 2704: set cookie lifetime in days (see above pref) - default is 90 days ***/
    // user_pref("network.cookie.lifetime.days", 90);
 /* 2705: disable dom storage
