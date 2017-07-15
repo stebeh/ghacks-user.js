@@ -1487,7 +1487,7 @@ user_pref("network.cookie.thirdparty.sessionOnly", true);
 /* 2703: set cookie lifetime policy
  * 0=until they expire (default), 2=until you close Firefox, 3=for n days (see next pref)
  * [SETTING] Options>Privacy>History>Custom Settings>Accept cookies from sites>Keep until ***/
-user_pref("network.cookie.lifetimePolicy", 0);
+user_pref("network.cookie.lifetimePolicy", 2);
 /* 2704: set cookie lifetime in days (see above pref) - default is 90 days ***/
    // user_pref("network.cookie.lifetime.days", 90);
 /* 2705: disable dom storage
