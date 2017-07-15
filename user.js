@@ -754,12 +754,12 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
  * [SETTING] Options>Fonts & Colors>Advanced>Serif|Sans-serif|Monospace
  * [SETUP] These are optional, comment out if you do not require them
  * [NOTE] Been using this for 18 months, it really grows on you ***/
-//user_pref("font.name.serif.x-unicode", "Georgia");
-//user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
-//user_pref("font.name.sans-serif.x-unicode", "Arial");
-//user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
-//user_pref("font.name.monospace.x-unicode", "Lucida Console");
-//user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
+user_pref("font.name.serif.x-unicode", "Georgia");
+user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
+user_pref("font.name.sans-serif.x-unicode", "Arial");
+user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
+user_pref("font.name.monospace.x-unicode", "Lucida Console");
+user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
 /* 1405: disable WOFF2 (Web Open Font Format) ***/
 user_pref("gfx.downloadable_fonts.woff2.enabled", false);
 /* 1406: disable CSS Font Loading API
@@ -779,7 +779,7 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
  * you block sites choosing fonts in 1401, this preference is irrelevant. In future,
  * privacy.resistFingerprinting (see 2699) may cover this, and 1401 can be relaxed.
  * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1121643 ***/
-user_pref("font.system.whitelist", "Arial, Arial Black, Calibri, Cambria, Cambria Math, Comic Sans MS, Consolas, Courier, Courier New, Georgia, Helvetica, Impact, Lucida Console, Lucida Sans Unicode, Microsoft Sans Serif, MS Gothic, MS PGothic, MS Sans Serif, MS Serif, Palatino Linotype, Segoe Print, Segoe Script, Segoe UI, Segoe UI Light, Segoe UI Semibold, Segoe UI Symbol, Tahoma, Times, Times New Roman, Trebuchet MS, Verdana, Wingdings, Aharoni, Andalus, Angsana New, AngsanaUPC, Aparajita, Arabic Typesetting, Batang, BatangChe, Browallia New, BrowalliaUPC, Candara, Constantia, Corbel, Cordia New, CordiaUPC, DaunPenh, David, DFKai-SB, DilleniaUPC, DokChampa, Dotum, DotumChe, Ebrima, EucrosiaUPC, Euphemia, FangSong, Fixedsys, FrankRuehl, FreesiaUPC, Gabriola, Gautami, Gisha, Gulim, GulimChe, Gungsuh, GungsuhChe, HELV, IrisUPC, Iskoola Pota, JasmineUPC, KaiTi, Kalinga, Kartika, Khmer UI, KodchiangUPC, Kokila, Lao UI, Latha, Leelawadee, Levenim MT, LilyUPC, Malgun Gothic, Mangal, Marlett, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft New Tai Lue, Microsoft PhagsPa, Microsoft Tai Le, Microsoft Uighur, Microsoft YaHei, Microsoft Yi Baiti, MingLiU, MingLiU_HKSCS, MingLiU_HKSCS-ExtB, MingLiU-ExtB, Miriam, Miriam Fixed, Modern, Mongolian Baiti, MoolBoran, MS Mincho, MS PMincho, MS UI Gothic, MV Boli, Narkisim, NSimSun, Nyala, Plantagenet Cherokee, PMingLiU, PMingLiU-ExtB, Raavi, Rod, Roman, Sakkal Majalla, Script, Shonar Bangla, Shruti, SimHei, Simplified Arabic, Simplified Arabic Fixed, SimSun, SimSun-ExtB, Small Fonts, Sylfaen, System, Terminal, Traditional Arabic, Tunga, Utsaah, Vani, Vijaya, Vrinda"); // (hidden pref)
+//user_pref("font.system.whitelist", ""); // PLATFORM dependent; APPENDED at end of this file!
 /*** 1600: HEADERS / REFERERS [SETUP]
      Except for DNT (Do Not Track), referers are best controlled by an extension.
      It is important to realize that it is *cross domain* referers that need
