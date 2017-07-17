@@ -754,6 +754,7 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
  * [SETTING] Options>Fonts & Colors>Advanced>Serif|Sans-serif|Monospace
  * [SETUP] These are optional, comment out if you do not require them
  * [NOTE] Been using this for 18 months, it really grows on you ***/
+user_pref("font.default.x-western", "sans-serif");
 user_pref("font.name.serif.x-unicode", "Georgia");
 user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
 user_pref("font.name.sans-serif.x-unicode", "Arial");
