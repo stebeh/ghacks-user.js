@@ -248,21 +248,21 @@ user_pref("services.blocklist.update_enabled", true);
     [1] https://wiki.mozilla.org/Security/Safe_Browsing ***/
 /* 0410: disable "Block dangerous and deceptive content" (under Options>Privacy & Security)
  * This covers deceptive sites such as phishing and social engineering ***/
-   // user_pref("browser.safebrowsing.malware.enabled", false);
-   // user_pref("browser.safebrowsing.phishing.enabled", false); // (FF50+)
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false); // (FF50+)
 /* 0411: disable "Block dangerous downloads" (under Options>Privacy & Security)
  * This covers malware and PUPs (potentially unwanted programs) ***/
-   // user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
 /* 0412: disable "Warn me about unwanted and uncommon software" (under Options>Privacy & Security) (FF48+) ***/
-   // user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
-   // user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
-   // user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false); // (FF49+)
-   // user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false); // (FF49+)
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false); // (FF49+)
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false); // (FF49+)
 /* 0413: disable Google safebrowsing updates ***/
-   // user_pref("browser.safebrowsing.provider.google.updateURL", "");
-   // user_pref("browser.safebrowsing.provider.google.gethashURL", "");
-   // user_pref("browser.safebrowsing.provider.google4.updateURL", ""); // (FF50+)
-   // user_pref("browser.safebrowsing.provider.google4.gethashURL", ""); // (FF50+)
+user_pref("browser.safebrowsing.provider.google.updateURL", "");
+user_pref("browser.safebrowsing.provider.google.gethashURL", "");
+user_pref("browser.safebrowsing.provider.google4.updateURL", ""); // (FF50+)
+user_pref("browser.safebrowsing.provider.google4.gethashURL", ""); // (FF50+)
 /* 0414: disable binaries NOT in local lists being checked by Google (real-time checking) ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
