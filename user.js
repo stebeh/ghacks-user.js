@@ -2134,3 +2134,6 @@ user_pref("network.jar.open-unsafe-types", false);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+user_pref("privacy.window.maxInnerWidth", 1700);
+user_pref("privacy.window.maxInnerHeight",1300);
