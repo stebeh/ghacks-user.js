@@ -924,8 +924,7 @@ user_pref("network.http.referer.hideOnionSource", true);
  * [SETTING] Privacy & Security>Tracking Protecting>Send websites a "Do Not Track"...
  * [SETTING-ESR52] Privacy>Use Tracking Protecting>manage your Do Not Track settings
  * [NOTE] DNT is enforced with TP (see 0420) regardless of this pref ***/
-user_pref("privacy.donottrackheader.enabled", true);
-user_pref("noscript.doNotTrack.enabled", false);
+user_pref("privacy.donottrackheader.enabled", false);
 
 /*** 1700: CONTAINERS [SETUP]
      [1] https://support.mozilla.org/kb/containers-experiment
