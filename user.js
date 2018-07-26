@@ -851,7 +851,7 @@ user_pref("browser.display.use_document_fonts", 0);
    // user_pref("font.name.monospace.x-western", "Lucida Console"); // default: Courier New
 /* 1403: enable icon fonts (glyphs) (FF41+)
  * [1] https://bugzilla.mozilla.org/789788 ***/
-user_pref("gfx.downloadable_fonts.enabled", false); // default: true
+user_pref("gfx.downloadable_fonts.enabled", true); // default: true (if false f.ex. uBlock menu does not display correctly)
 /* 1404: disable rendering of SVG OpenType fonts
  * [1] https://wiki.mozilla.org/SVGOpenTypeFonts - iSECPartnersReport recommends to disable this ***/
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
