@@ -1070,7 +1070,7 @@ user_pref("browser.link.open_newwindow.restriction", 0);
  * [NOTE] You can still manually toggle the browser's fullscreen state (F11),
  * but this pref will disable embedded video/game fullscreen controls, e.g. youtube
  * [TEST] https://developer.mozilla.org/samples/domref/fullscreen.html ***/
-user_pref("full-screen-api.enabled", false);
+user_pref("full-screen-api.enabled", true);
 /* 2210: block popup windows
  * [SETTING] Privacy & Security>Permissions>Block pop-up windows
  * [SETTING-ESR52] Content>Pop-ups>Block pop-up windows ***/
