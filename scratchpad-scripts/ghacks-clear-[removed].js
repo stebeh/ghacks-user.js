@@ -1,7 +1,7 @@
 /***
  This will reset the preferences that have been removed completely from the ghacks user.js.
 
- Last updated: 06-July-2018
+ Last updated: 22-Apr-2019
 
  For instructions see:
  https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
@@ -99,6 +99,30 @@
     'network.http.fast-fallback-to-IPv4',
     'offline-apps.quota.warn',
     'services.blocklist.signing.enforced',
+    /* 62-beta */
+    'browser.urlbar.autoFill.typed',
+    'security.tls.version.fallback-limit',
+    /* 63-beta */
+    'extensions.webextensions.keepStorageOnUninstall',
+    'extensions.webextensions.keepUuidOnUninstall',
+    'privacy.trackingprotection.ui.enabled',
+    /* 64-beta */
+    'browser.eme.ui.enabled',
+    'browser.sessionstore.max_windows_undo',
+    'network.auth.subresource-img-cross-origin-http-auth-allow',
+    'media.peerconnection.ice.tcp',
+    'media.peerconnection.identity.enabled',
+    'media.peerconnection.identity.timeout',
+    'media.peerconnection.turn.disable',
+    'media.peerconnection.use_document_iceservers',
+    'media.peerconnection.video.enabled',
+    'media.navigator.video.enabled',
+    /* 65-beta */
+    'browser.contentblocking.enabled',
+    'browser.urlbar.maxHistoricalSearchSuggestions',
+    /* 67-beta */
+    'canvas.capturestream.enabled',
+    'pdfjs.enableWebGL',
     /* reset parrot: check your open about:config after running the script */
     '_user.js.parrot'
   ]
