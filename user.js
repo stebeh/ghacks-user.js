@@ -906,13 +906,13 @@ user_pref("browser.display.use_document_fonts", 0); // intentional devication
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
  * [2] https://trac.torproject.org/projects/tor/ticket/8455 ***/
-user_pref("gfx.downloadable_fonts.enabled", false); // [FF41+]
-user_pref("gfx.downloadable_fonts.fallback_delay", -1);
+   // user_pref("gfx.downloadable_fonts.enabled", false); // [FF41+] - breaks mailbox.org & others
+   // user_pref("gfx.downloadable_fonts.fallback_delay", -1);
 /* 1404: disable rendering of SVG OpenType fonts
  * [1] https://wiki.mozilla.org/SVGOpenTypeFonts - iSECPartnersReport recommends to disable this ***/
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 /* 1405: disable WOFF2 (Web Open Font Format) [FF35+] ***/
-user_pref("gfx.downloadable_fonts.woff2.enabled", false);
+   // user_pref("gfx.downloadable_fonts.woff2.enabled", false);
 /* 1406: disable CSS Font Loading API
  * [NOTE] Disabling fonts can uglify the web a fair bit. ***/
 user_pref("layout.css.font-loading-api.enabled", false);
