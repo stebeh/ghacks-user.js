@@ -195,9 +195,9 @@ user_pref("app.update.auto", false);
    // user_pref("extensions.update.autoUpdateDefault", false);
 /* 0303: disable background update service [WINDOWS]
  * [SETTING] General>Firefox Updates>Use a background service to install updates ***/
-user_pref("app.update.service.enabled", false);
+// user_pref("app.update.service.enabled", false);
 /* 0304: disable background update staging ***/
-user_pref("app.update.staging.enabled", false);
+// user_pref("app.update.staging.enabled", false);
 /* 0305: enforce update information is displayed
  * This is the update available, downloaded, error and success information ***/
 user_pref("app.update.silent", false);
