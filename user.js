@@ -195,9 +195,9 @@ user_pref("app.update.auto", false);
    // user_pref("extensions.update.autoUpdateDefault", false);
 /* 0303: disable background update service [WINDOWS]
  * [SETTING] General>Firefox Updates>Use a background service to install updates ***/
-// user_pref("app.update.service.enabled", false);
+// user_pref("app.update.service.enabled", false);  // stefan: must be on
 /* 0304: disable background update staging ***/
-// user_pref("app.update.staging.enabled", false);
+// user_pref("app.update.staging.enabled", false);  // stefan: better leave default
 /* 0305: enforce update information is displayed
  * This is the update available, downloaded, error and success information ***/
 user_pref("app.update.silent", false);
@@ -219,7 +219,7 @@ user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 user_pref("dom.ipc.plugins.reportCrashURL", false);
 /* 0320: disable about:addons' Get Add-ons panel (uses Google Analytics) ***/
 user_pref("extensions.getAddons.showPane", false); // [HIDDEN PREF]
-user_pref("extensions.getAddons.discovery.api_url", ""); // hide addon recommendations
+user_pref("extensions.getAddons.discovery.api_url", ""); // stefan: hide addon recommendations
 user_pref("extensions.webservice.discoverURL", "");
 /* 0330: disable telemetry
  * the pref (.unified) affects the behaviour of the pref (.enabled)
@@ -907,13 +907,13 @@ user_pref("browser.display.use_document_fonts", 0); // intentional devication
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
  * [2] https://trac.torproject.org/projects/tor/ticket/8455 ***/
-   // user_pref("gfx.downloadable_fonts.enabled", false); // [FF41+] - breaks mailbox.org & others
-   // user_pref("gfx.downloadable_fonts.fallback_delay", -1);
+   // user_pref("gfx.downloadable_fonts.enabled", false); // [FF41+] - stefan: breaks mailbox.org & others
+   // user_pref("gfx.downloadable_fonts.fallback_delay", -1);        // stefan
 /* 1404: disable rendering of SVG OpenType fonts
  * [1] https://wiki.mozilla.org/SVGOpenTypeFonts - iSECPartnersReport recommends to disable this ***/
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 /* 1405: disable WOFF2 (Web Open Font Format) [FF35+] ***/
-   // user_pref("gfx.downloadable_fonts.woff2.enabled", false);
+   // user_pref("gfx.downloadable_fonts.woff2.enabled", false);    // stefan
 /* 1406: disable CSS Font Loading API
  * [NOTE] Disabling fonts can uglify the web a fair bit. ***/
 user_pref("layout.css.font-loading-api.enabled", false);
@@ -1185,7 +1185,7 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
  * this applies to onCut, onCopy, onPaste events - i.e. you have to interact with
  * the website for it to look at the clipboard
  * [1] https://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/ ***/
-user_pref("dom.event.clipboardevents.enabled", true); // else copy/paste does not work
+user_pref("dom.event.clipboardevents.enabled", true); // stefan: else copy/paste does not work
 /* 2403: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/1170911 ***/
@@ -1347,7 +1347,7 @@ user_pref("network.IDN_show_punycode", true);
  * CONS: You may prefer a different pdf reader for security reasons
  * CAVEAT: JS can still force a pdf to open in-browser by bundling its own code (rare)
  * [SETTING] General>Applications>Portable Document Format (PDF) ***/
-user_pref("pdfjs.disabled", false); // [DEFAULT: false]
+user_pref("pdfjs.disabled", true); // [DEFAULT: false]  - stefan
 /* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
  * [1] https://www.ghacks.net/2016/03/25/block-firefox-chrome-windows-store/ ***/
 user_pref("network.protocol-handler.external.ms-windows-store", false);
