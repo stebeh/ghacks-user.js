@@ -1,6 +1,6 @@
 /***
  This will reset the preferences that are under sections 4600 & 4700 in the ghacks user.js
- up to and including release 60-beta. These are the prefs that are no longer necessary,
+ up to and including Firefox/ESR 68. These are the prefs that are no longer necessary,
  or they conflict with, privacy.resistFingerprinting if you have that enabled.
 
  For instructions see:
@@ -22,6 +22,8 @@
     'dom.w3c_touch_events.enabled',
     'media.ondevicechange.enabled',
     'webgl.enable-debug-renderer-info',
+    'dom.w3c_pointer_events.enabled',
+    'ui.use_standins_for_native_colors',
     /* section 4700 */
     'general.useragent.override',
     'general.buildID.override',

@@ -1,6 +1,6 @@
 /***
  This will reset the preferences that have been deprecated by Mozilla
- and used in the ghacks user.js up to and including release 60-beta
+ and used in the ghacks user.js up to and including Firefox/ESR 68
 
  It is in reverse order, so feel free to remove sections that do not apply
 
@@ -12,8 +12,43 @@
   let ops = [
     /* deprecated */
 
-    /* ESR52.x users can remove sections 53-60 but it is not
-       crucial as your user.js will reinstate them */
+    /* 68 */
+    'browser.newtabpage.activity-stream.disableSnippets',
+    'browser.aboutHomeSnippets.updateUrl',
+    'lightweightThemes.update.enabled',
+    'security.csp.experimentalEnabled',
+    /* F67 */
+    'dom.event.highrestimestamp.enabled',
+    'browser.newtabpage.activity-stream.asrouter.userprefs.cfr',
+    /* 66 */
+    'browser.chrome.errorReporter.enabled',
+    'browser.chrome.errorReporter.submitUrl',
+    'network.allow-experiments',
+    /* 65 */
+    'browser.urlbar.autocomplete.enabled',
+    'browser.fixup.hide_user_pass',
+    /* 64 */
+    'browser.onboarding.enabled',
+    'devtools.webide.autoinstallADBHelper',
+    'devtools.webide.adbAddonURL',
+    'security.csp.enable_violation_events',
+    /* 63 */
+    'browser.search.countryCode',
+    'app.update.enabled',
+    'shield.savant.enabled',
+    'browser.chrome.favicons',
+    'media.autoplay.enabled',
+    'network.cookie.lifetime.days',
+    'browser.ctrlTab.previews',
+    /* 62 */
+    'plugin.state.java',
+    /* 61 */
+    'experiments.enabled',
+    'experiments.manifest.uri',
+    'experiments.supported',
+    'experiments.activeExperiment',
+    'network.jar.block-remote-files',
+    'network.jar.open-unsafe-types',
     /* 60 */
     'browser.newtabpage.directory.source',
     'browser.newtabpage.enhanced',
@@ -22,7 +57,6 @@
     'extensions.shield-recipe-client.api_url',
     'browser.newtabpage.activity-stream.enabled',
     'dom.workers.enabled',
-    'view_source.tab',
     /* 59 */
     'intl.locale.matchOS',
     'general.useragent.locale',
@@ -76,8 +110,6 @@
     'plugin.scan.WindowsMediaPlayer',
     'media.getusermedia.screensharing.allow_on_old_platforms',
     'dom.beforeAfterKeyboardEvent.enabled',
-    /* End of ESR52.x section */
-
     /* 52 */
     'network.http.sendSecureXSiteReferrer',
     'media.gmp-eme-adobe.enabled',
