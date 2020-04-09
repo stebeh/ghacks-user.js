@@ -534,6 +534,14 @@ user_pref("browser.taskbar.lists.tasks.enabled", false);
 /* 0871: disable Windows taskbar preview [WINDOWS] ***/
 user_pref("browser.taskbar.previews.enable", false);
 
+/* stefan: fixed this before upstream did; check if duplicated in next update */
+user_pref("browser.urlbar.openViewOnFocus", false); // stefan
+user_pref("browser.urlbar.update1", false); // stefan
+user_pref("browser.urlbar.update1.interventions", false); // stefan
+user_pref("browser.urlbar.update1.searchTips", false); // stefan
+user_pref("browser.urlbar.update1.view.stripHttps", false); // stefan
+
+
 /*** [SECTION 0900]: PASSWORDS ***/
 user_pref("_user.js.parrot", "0900 syntax error: the parrot's expired!");
 /* 0901: disable saving passwords
