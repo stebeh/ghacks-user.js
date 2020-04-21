@@ -1731,6 +1731,8 @@ user_pref("webgl.disable-extensions", true);
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
+// ---------- private settings ------------
+
 // makes many pages that otherwise load own fonts, look better, and it is just another deviation
 user_pref("font.default.x-western", "sans-serif");
 
