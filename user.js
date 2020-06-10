@@ -497,9 +497,9 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 /* 0850a: disable location bar suggestion types
  * If all three suggestion types are false, search engine keywords are disabled
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
-   // user_pref("browser.urlbar.suggest.history", false);
-   // user_pref("browser.urlbar.suggest.bookmark", false);
-   // user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.history", false);  // stefan
+user_pref("browser.urlbar.suggest.bookmark", false); // stefan
+user_pref("browser.urlbar.suggest.openpage", false); // stefan
 /* 0850c: disable location bar dropdown
  * This value controls the total number of entries to appear in the location bar dropdown
  * [NOTE] Items (bookmarks/history/openpages) with a high "frecency"/"bonus" will always
