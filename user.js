@@ -1211,7 +1211,7 @@ user_pref("network.IDN_show_punycode", true);
  * CONS: You may prefer a different pdf reader for security reasons
  * CAVEAT: JS can still force a pdf to open in-browser by bundling its own code (rare)
  * [SETTING] General>Applications>Portable Document Format (PDF) ***/
-user_pref("pdfjs.disabled", false); // [DEFAULT: false]
+user_pref("pdfjs.disabled", true); // stefan
 /* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
  * [1] https://www.ghacks.net/2016/03/25/block-firefox-chrome-windows-store/ ***/
 user_pref("network.protocol-handler.external.ms-windows-store", false);
