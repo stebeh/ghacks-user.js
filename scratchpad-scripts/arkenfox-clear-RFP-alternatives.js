@@ -1,10 +1,12 @@
 /***
- This will reset the preferences that are under sections 4600 & 4700 in the ghacks user.js
- up to and including Firefox/ESR 68. These are the prefs that are no longer necessary,
- or they conflict with, privacy.resistFingerprinting if you have that enabled.
+ Version: up to and including FF/ESR78
+
+ This will reset the preferences that are under sections 4600 & 4700 in the
+ arkenfox user.js. These are the prefs that are no longer necessary, or they
+ conflict with, privacy.resistFingerprinting if you have that enabled.
 
  For instructions see:
- https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
+ https://github.com/arkenfox/user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
 ***/
  
 (function() {
@@ -24,6 +26,8 @@
     'webgl.enable-debug-renderer-info',
     'dom.w3c_pointer_events.enabled',
     'ui.use_standins_for_native_colors',
+    'ui.systemUsesDarkTheme',
+    'ui.prefersReducedMotion',
     /* section 4700 */
     'general.useragent.override',
     'general.buildID.override',

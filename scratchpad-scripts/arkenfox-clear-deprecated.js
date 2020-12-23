@@ -1,17 +1,44 @@
 /***
+ Version: up to and including FF/ESR78
+
  This will reset the preferences that have been deprecated by Mozilla
- and used in the ghacks user.js up to and including Firefox/ESR 68
+ and used in the arkenfox user.js
 
  It is in reverse order, so feel free to remove sections that do not apply
 
  For instructions see:
- https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
+ https://github.com/arkenfox/user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
 ***/
 
 (function() {
   let ops = [
     /* deprecated */
 
+    /* 78 */
+    'media.autoplay.enabled.user-gestures-needed',
+    'toolkit.cosmeticAnimations.enabled',
+    /* 77 */
+    'browser.urlbar.oneOffSearches',
+    'browser.tabs.remote.allowLinkedWebInFileUriProcess',
+    /* 76 */
+    'extensions.blocklist.url',
+    /* 74 */
+    'geo.wifi.uri',
+    'geo.wifi.logging.enabled',
+    'privacy.userContext.longPressBehavior',
+    'webgl.disable-extensions',
+    /* 72 */
+    'browser.newtabpage.activity-stream.telemetry.ping.endpoint',
+    'toolkit.telemetry.hybridContent.enabled',
+    'dom.indexedDB.enabled',
+    /* 71 */
+    'devtools.webide.enabled',
+    'devtools.webide.autoinstallADBExtension',
+    'offline-apps.allow_by_default',
+    /* 69 */
+    'gfx.downloadable_fonts.woff2.enabled',
+    'plugins.click_to_play',
+    'media.autoplay.allow-muted',
     /* 68 */
     'browser.newtabpage.activity-stream.disableSnippets',
     'browser.aboutHomeSnippets.updateUrl',

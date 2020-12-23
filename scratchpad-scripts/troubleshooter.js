@@ -1,5 +1,5 @@
 
-/*** ghacks-user.js troubleshooter.js v1.6.1 ***/
+/*** arkenfox user.js troubleshooter.js v1.6.3 ***/
 
 (function() {
 
@@ -17,9 +17,7 @@
 
     /* Storage + Cache */
     'browser.cache.offline.enable',
-    'dom.indexedDB.enabled',
     'dom.storage.enabled',
-    'browser.storageManager.enabled',
     'dom.storageManager.enabled',
 
     /* Workers, Web + Push Notifications */
@@ -34,7 +32,6 @@
     /* Fonts */
     'browser.display.use_document_fonts',
     'font.blacklist.underline_offset',
-    'gfx.downloadable_fonts.woff2.enabled',
     'gfx.font_rendering.graphite.enabled',
     'gfx.font_rendering.opentype_svg.enabled',
     'layout.css.font-loading-api.enabled',
@@ -47,12 +44,10 @@
     'dom.IntersectionObserver.enabled',
     'dom.popup_allowed_events',
     'full-screen-api.enabled',
-    'geo.wifi.uri',
     'intl.accept_languages',
     'javascript.options.asmjs',
     'javascript.options.wasm',
     'permissions.default.shortcuts',
-    'security.csp.experimentalEnabled',
 
     /* Hardware */
     'dom.vr.enabled',
@@ -60,8 +55,8 @@
 
     /* Audio + Video */
     'dom.webaudio.enabled',
-    'media.autoplay.enabled',
     'media.autoplay.default', // FF63+
+    'media.autoplay.blocking_policy', // FF78+
 
     /* Forms */
     'browser.formfill.enable',
@@ -88,13 +83,11 @@
 
     /* Plugins + Flash */
     'plugin.default.state',
-    'plugin.defaultXpi.state',
-    'plugin.sessionPermissionNow.intervalInMinutes',
     'plugin.state.flash',
 
     /* unlikely to cause problems */
-    'browser.tabs.remote.allowLinkedWebInFileUriProcess',
     'dom.popup_maximum',
+    'geo.provider.network.url',
     'layout.css.visited_links_enabled',
     'mathml.disabled',
     'network.auth.subresource-http-auth-allow',
@@ -102,6 +95,7 @@
     'network.protocol-handler.external.ms-windows-store',
     'privacy.trackingprotection.enabled',
     'security.data_uri.block_toplevel_data_uri_navigations',
+    'privacy.window.name.update.enabled', // FF82+
 
     'last.one.without.comma'
   ]

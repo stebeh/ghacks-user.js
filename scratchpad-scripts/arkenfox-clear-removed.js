@@ -1,15 +1,15 @@
 /***
- This will reset the preferences that have been removed completely from the ghacks user.js.
+ This will reset the preferences that have been removed completely from the arkenfox user.js.
 
- Last updated: 12-April-2020
+ Last updated: 02-Nov-2020
 
  For instructions see:
- https://github.com/ghacksuserjs/ghacks-user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
+ https://github.com/arkenfox/user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
 ***/
  
 (function() {
   let ops = [
-    /* removed in ghacks user.js v52-57 */
+    /* removed in arkenfox user.js v52-57 */
     /* 52-alpha */
     'browser.search.reset.enabled',
     'browser.search.reset.whitelist',
@@ -221,6 +221,16 @@
     /* 75-beta */
     'browser.search.geoip.url',
     'browser.search.region',
+    /* 79-beta */
+    'browser.urlbar.usepreloadedtopurls.enabled',
+    /* 82-beta */
+    'dom.IntersectionObserver.enabled',
+    'extensions.screenshots.upload-disabled',
+    'privacy.partition.network_state',
+    'security.ssl3.dhe_rsa_aes_128_sha',
+    'security.ssl3.dhe_rsa_aes_256_sha',
+    /* 84-beta */
+    'layout.css.visited_links_enabled',
     /* reset parrot: check your open about:config after running the script */
     '_user.js.parrot'
   ]
