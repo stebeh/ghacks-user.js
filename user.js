@@ -1677,3 +1677,9 @@ user_pref("browser.search.geoSpecificDefaults.url", "");
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+// ---------- private settings ------------
+
+// on Linux the following is needed to get the monitor output color profile used; on Windows it works without
+user_pref("gfx.color_management.mode", 1);
+
