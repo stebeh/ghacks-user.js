@@ -3,7 +3,7 @@
   - removed from the arkenfox user.js
   - deprecated by Mozilla but listed in the arkenfox user.js in the past
 
-  Last updated: 5-May-2022
+  Last updated: 27-January-2023
 
   Instructions:
   - [optional] close Firefox and backup your profile
@@ -32,17 +32,23 @@
 
   const aPREFS = [
     /* DEPRECATED */
-    /* FF92+ */
+    /* 103+ */
+    'network.cookie.lifetimePolicy', // 103 [technically removed in 104]
+    'security.pki.sha1_enforcement_level', // 103
+    /* 92-102 */
     'browser.urlbar.suggest.quicksuggest', // 95
     'dom.securecontext.whitelist_onions', // 97
+    'dom.storage.next_gen', // 102
     'network.http.spdy.enabled', // 100
     'network.http.spdy.enabled.deps',
     'network.http.spdy.enabled.http2',
     'network.http.spdy.websockets',
     'layout.css.font-visibility.level', // 94
+    'security.ask_for_password', // 102
     'security.csp.enable', // 99
+    'security.password_lifetime', // 102
     'security.ssl3.rsa_des_ede3_sha', // 93
-    /* FF79-91 */
+    /* 79-91 */
     'browser.cache.offline.storage.enable',
     'browser.download.hide_plugins_without_extensions',
     'browser.library.activity-stream.enabled',
@@ -231,11 +237,35 @@
     'toolkit.telemetry.unifiedIsOptIn',
 
     /* REMOVED */
-    /* 92+ */
+    /* 103+ */
+    'beacon.enabled',
+    'browser.startup.blankWindow',
+    'browser.newtab.preload',
+    'browser.newtabpage.activity-stream.feeds.discoverystreamfeed',
+    'browser.newtabpage.activity-stream.feeds.snippets',
+    'browser.region.network.url',
+    'browser.region.update.enabled',
+    'browser.search.region',
+    'browser.ssl_override_behavior',
+    'browser.tabs.warnOnClose',
+    'devtools.chrome.enabled',
+    'dom.disable_beforeunload',
+    'dom.disable_open_during_load',
+    'dom.netinfo.enabled',
+    'dom.vr.enabled',
+    'extensions.formautofill.addresses.supported',
+    'extensions.formautofill.available',
+    'extensions.formautofill.creditCards.available',
+    'extensions.formautofill.creditCards.supported',
+    'network.http.altsvc.oe',
+    /* 92-102 */
+    'browser.urlbar.trimURLs',
     'dom.caches.enabled',
     'dom.storageManager.enabled',
     'dom.storage_access.enabled',
     'dom.targetBlankNoOpener.enabled',
+    'network.cookie.thirdparty.sessionOnly',
+    'network.cookie.thirdparty.nonsecureSessionOnly',
     'privacy.firstparty.isolate.block_post_message',
     'privacy.firstparty.isolate.restrict_opener_access',
     'privacy.firstparty.isolate.use_site',
