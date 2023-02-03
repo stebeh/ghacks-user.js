@@ -1370,4 +1370,4 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 // ---------- private settings ------------
 user_pref("gfx.color_management.mode", 1);  // stefan: on Linux this is needed to get the monitor output color profile used; on Windows it works without
 user_pref("dom.block_download_insecure", false); // stefan: blocks HTTP DLs otherwise
-
+user_pref("security.certerrors.mitm.auto_enable_enterprise_roots", false);  // stefan: windows only: https://support.mozilla.org/en-US/kb/how-disable-enterprise-roots-preference
