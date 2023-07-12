@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 9 January 2023
-* version: 108
+*    date: 4 May 2023
+* version: 112
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -78,9 +78,6 @@ user_pref("browser.aboutConfig.showWarning", false);
 
 /*** [SECTION 0100]: STARTUP ***/
 user_pref("_user.js.parrot", "0100 syntax error: the parrot's dead!");
-/* 0101: disable default browser check
- * [SETTING] General>Startup>Always check if Firefox is your default browser ***/
-user_pref("browser.shell.checkDefaultBrowser", false);
 /* 0102: set startup page [SETUP-CHROME]
  * 0=blank, 1=home, 2=last visited page, 3=resume previous session
  * [NOTE] Session Restore is cleared with history (2811), and not used in Private Browsing mode
@@ -265,7 +262,7 @@ user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost
  * IPv6 can be abused, especially with MAC addresses, and can leak with VPNs: assuming
  * your ISP and/or router and/or website is IPv6 capable. Most sites will fall back to IPv4
  * [SETUP-WEB] PR_CONNECT_RESET_ERROR: this pref *might* be the cause
- * [STATS] Firefox telemetry (Sept 2022) shows ~8% of successful connections are IPv6
+ * [STATS] Firefox telemetry (Feb 2023) shows ~9% of successful connections are IPv6
  * [NOTE] This is an application level fallback. Disabling IPv6 is best done at an
  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
  * then this won't make much difference. If you are masking your IP, then it can only help.
@@ -429,7 +426,7 @@ user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
  * but the problem is that the browser can't know that. Setting this pref to true is the only way for the
  * browser to ensure there will be no unsafe renegotiations on the channel between the browser and the server
  * [SETUP-WEB] SSL_ERROR_UNSAFE_NEGOTIATION: is it worth overriding this for that one site?
- * [STATS] SSL Labs (Sept 2022) reports over 99.3% of top sites have secure renegotiation [4]
+ * [STATS] SSL Labs (Feb 2023) reports over 99.3% of top sites have secure renegotiation [4]
  * [1] https://wiki.mozilla.org/Security:Renegotiation
  * [2] https://datatracker.ietf.org/doc/html/rfc5746
  * [3] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555
@@ -474,8 +471,7 @@ user_pref("security.OCSP.require", true);
 user_pref("security.family_safety.mode", 0);
 /* 1223: enable strict PKP (Public Key Pinning)
  * 0=disabled, 1=allow user MiTM (default; such as your antivirus), 2=strict
- * [SETUP-WEB] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
- * your web browsing by inspecting ALL your web traffic, then override to current default ***/
+ * [SETUP-WEB] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE ***/
 user_pref("security.cert_pinning.enforcement_level", 2);
 /* 1224: enable CRLite [FF73+]
  * 0 = disabled
@@ -561,13 +557,6 @@ user_pref("privacy.userContext.ui.enabled", true);
 
 /*** [SECTION 2000]: PLUGINS / MEDIA / WEBRTC ***/
 user_pref("_user.js.parrot", "2000 syntax error: the parrot's snuffed it!");
-/* 2001: disable WebRTC (Web Real-Time Communication)
- * Firefox desktop uses mDNS hostname obfuscation and the private IP is never exposed until
- * required in TRUSTED scenarios; i.e. after you grant device (microphone or camera) access
- * [TEST] https://browserleaks.com/webrtc
- * [1] https://groups.google.com/g/discuss-webrtc/c/6stQXi72BEU/m/2FwZd24UAQAJ
- * [2] https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-mdns-ice-candidates#section-3.1.1 ***/
-   // user_pref("media.peerconnection.enabled", false);
 /* 2002: force WebRTC inside the proxy [FF70+] ***/
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 /* 2003: force a single network interface for ICE candidates generation [FF42+]
@@ -598,8 +587,6 @@ user_pref("media.eme.enabled", false);
 user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!");
 /* 2402: prevent scripts from moving and resizing open windows ***/
 user_pref("dom.disable_window_move_resize", true);
-/* 2404: limit events that can cause a pop-up [SETUP-WEB] ***/
-user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
 
 /*** [SECTION 2600]: MISCELLANEOUS ***/
 user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
@@ -609,8 +596,6 @@ user_pref("accessibility.force_disabled", 1);
 /* 2603: remove temp files opened with an external application
  * [1] https://bugzilla.mozilla.org/302433 ***/
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
-/* 2604: disable page thumbnail collection ***/
-user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
 /* 2606: disable UITour backend so there is no chance that a remote page can use it ***/
 user_pref("browser.uitour.enabled", false);
    // user_pref("browser.uitour.url", ""); // Defense-in-depth
@@ -856,10 +841,6 @@ user_pref("privacy.resistFingerprinting.letterboxing", false); // stefan....[HID
    // user_pref("privacy.resistFingerprinting.testGranularityMask", 0);
 /* 4506: set RFP's font visibility level (1402) [FF94+] ***/
    // user_pref("layout.css.font-visibility.resistFingerprinting", 1); // [DEFAULT: 1]
-/* 4507: disable showing about:blank as soon as possible during startup [FF60+]
- * When default true this no longer masks the RFP chrome resizing activity
- * [1] https://bugzilla.mozilla.org/1448423 ***/
-user_pref("browser.startup.blankWindow", false);
 /* 4510: disable using system colors
  * [SETTING] General>Language and Appearance>Fonts and Colors>Colors>Use system colors ***/
 user_pref("browser.display.use_system_colors", false); // [DEFAULT: false NON-WINDOWS]
@@ -894,7 +875,7 @@ user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow
  * caches, searches, cookies, localStorage, IndexedDB etc (which you can achieve in normal mode).
  * In fact, PB mode limits or removes the ability to control some of these, and you need to quit
  * Firefox to clear them. PB is best used as a one off window (Menu>New Private Window) to provide
- * a temporary self-contained new session. Close all Private Windows to clear the PB mode session.
+ * a temporary self-contained new session. Close all private windows to clear the PB session.
  * [SETTING] Privacy & Security>History>Custom Settings>Always use private browsing mode
  * [1] https://wiki.mozilla.org/Private_Browsing
  * [2] https://support.mozilla.org/kb/common-myths-about-private-browsing ***/
@@ -932,10 +913,10 @@ user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow
    // user_pref("browser.download.forbid_open_with", true);
 /* 5010: disable location bar suggestion types
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
-   user_pref("browser.urlbar.suggest.history", false); // stefan
-   user_pref("browser.urlbar.suggest.bookmark", false); // stefan
-   user_pref("browser.urlbar.suggest.openpage", false); // stefan
-   user_pref("browser.urlbar.suggest.topsites", false); // [FF78+]  // stefan
+   // user_pref("browser.urlbar.suggest.history", false);
+   // user_pref("browser.urlbar.suggest.bookmark", false);
+   // user_pref("browser.urlbar.suggest.openpage", false);
+   // user_pref("browser.urlbar.suggest.topsites", false); // [FF78+]
 /* 5011: disable location bar dropdown
  * This value controls the total number of entries to appear in the location bar dropdown ***/
    // user_pref("browser.urlbar.maxRichResults", 0);
@@ -966,6 +947,12 @@ user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow
    // user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
    // user_pref("extensions.formautofill.creditCards.enabled", false); // [FF56+]
    // user_pref("extensions.formautofill.heuristics.enabled", false); // [FF55+]
+/* 5018: limit events that can cause a pop-up ***/
+   // user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
+/* 5019: disable page thumbnail collection ***/
+   // user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
+/* 5020: disable Windows native notifications and use app notications instead [FF111+] [WINDOWS] ***/
+   // user_pref("alerts.useSystemBackend.windows.notificationserver.enabled", false);
 
 /*** [SECTION 5500]: OPTIONAL HARDENING
    Not recommended. Overriding these can cause breakage and performance issues,
@@ -1020,8 +1007,8 @@ user_pref("network.http.referer.spoofSource", false); // [DEFAULT: false]
  * [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ ***/
 user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
 /* 6008: enforce no First Party Isolation [FF51+]
- * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701),
- * and enabling FPI disables those. FPI is no longer maintained ***/
+ * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701), and enabling FPI
+ * disables those. FPI is no longer maintained except at Tor Project for Tor Browser's config ***/
 user_pref("privacy.firstparty.isolate", false); // [DEFAULT: false]
 /* 6009: enforce SmartBlock shims [FF81+]
  * In FF96+ these are listed in about:compat
@@ -1036,6 +1023,7 @@ user_pref("security.tls.version.enable-deprecated", false); // [DEFAULT: false]
 user_pref("extensions.webcompat-reporter.enabled", false); // [DEFAULT: false]
 /* 6050: prefsCleaner: reset previously active items removed from arkenfox FF102+ ***/
    // user_pref("beacon.enabled", "");
+   // user_pref("browser.startup.blankWindow", "");
    // user_pref("browser.newtab.preload", "");
    // user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", "");
    // user_pref("browser.newtabpage.activity-stream.feeds.snippets", "");
@@ -1132,6 +1120,7 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
    // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
    // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true); // [FF100+]
    // user_pref("privacy.partition.network_state.ocsp_cache", true);
+   // user_pref("privacy.query_stripping.enabled", true); // [FF101+] [ETP FF102+]
    // user_pref("privacy.trackingprotection.enabled", true);
    // user_pref("privacy.trackingprotection.socialtracking.enabled", true);
    // user_pref("privacy.trackingprotection.cryptomining.enabled", true); // [DEFAULT: true]
@@ -1149,6 +1138,13 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
  * [NOTE] To remove all subscriptions, reset "dom.push.userAgentID"
  * [1] https://support.mozilla.org/kb/push-notifications-firefox ***/
    // user_pref("dom.push.enabled", false);
+/* 7020: disable WebRTC (Web Real-Time Communication)
+ * [WHY] Firefox desktop uses mDNS hostname obfuscation and the private IP is never exposed until
+ * required in TRUSTED scenarios; i.e. after you grant device (microphone or camera) access
+ * [TEST] https://browserleaks.com/webrtc
+ * [1] https://groups.google.com/g/discuss-webrtc/c/6stQXi72BEU/m/2FwZd24UAQAJ
+ * [2] https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-mdns-ice-candidates#section-3.1.1 ***/
+   // user_pref("media.peerconnection.enabled", false);
 
 /*** [SECTION 8000]: DON'T BOTHER: FINGERPRINTING
    [WHY] They are insufficient to help anti-fingerprinting and do more harm than good
@@ -1188,8 +1184,8 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", fa
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 /* 9003: disable What's New toolbar icon [FF69+] ***/
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
-/* 9004: disable seach terms [FF110+]
- * [SETTING] Search > SearchBar > Use the address bar for search and navigation > Show search terms instead of URL... ***/
+/* 9004: disable search terms [FF110+]
+ * [SETTING] Search>Search Bar>Use the address bar for search and navigation>Show search terms instead of URL... ***/
 user_pref("browser.urlbar.showSearchTerms.enabled", false);
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
