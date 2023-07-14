@@ -913,10 +913,10 @@ user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow
    // user_pref("browser.download.forbid_open_with", true);
 /* 5010: disable location bar suggestion types
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
-   // user_pref("browser.urlbar.suggest.history", false);
-   // user_pref("browser.urlbar.suggest.bookmark", false);
-   // user_pref("browser.urlbar.suggest.openpage", false);
-   // user_pref("browser.urlbar.suggest.topsites", false); // [FF78+]
+user_pref("browser.urlbar.suggest.history", false);    // stefan
+user_pref("browser.urlbar.suggest.bookmark", false);    // stefan
+user_pref("browser.urlbar.suggest.openpage", false);    // stefan
+user_pref("browser.urlbar.suggest.topsites", false);    // stefan
 /* 5011: disable location bar dropdown
  * This value controls the total number of entries to appear in the location bar dropdown ***/
    // user_pref("browser.urlbar.maxRichResults", 0);
