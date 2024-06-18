@@ -304,7 +304,7 @@ user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF]
  * [2] https://wiki.mozilla.org/Security/DOH-resolver-policy
  * [3] https://support.mozilla.org/en-US/kb/firefox-dns-over-https
  * [4] https://www.eff.org/deeplinks/2020/12/dns-doh-and-odoh-oh-my-year-review-2020 ***/
-   // user_pref("network.trr.mode", 5);
+user_pref("network.trr.mode", 5); // stefan
 
 /*** [SECTION 0800]: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS ***/
 user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
@@ -1213,3 +1213,4 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 user_pref("gfx.color_management.mode", 1);  // stefan: on Linux this is needed to get the monitor output color profile used; on Windows it works without
 user_pref("dom.block_download_insecure", false); // stefan: blocks HTTP DLs otherwise
 user_pref("security.certerrors.mitm.auto_enable_enterprise_roots", false);  // stefan: windows only: https://support.mozilla.org/en-US/kb/how-disable-enterprise-roots-preference
+
