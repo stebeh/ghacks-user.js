@@ -1265,3 +1265,8 @@ user_pref("gfx.color_management.mode", 1);  // stefan: on Linux this is needed t
 user_pref("dom.block_download_insecure", false); // stefan: blocks HTTP DLs otherwise
 user_pref("security.certerrors.mitm.auto_enable_enterprise_roots", false);  // stefan: windows only: https://support.mozilla.org/en-US/kb/how-disable-enterprise-roots-preference
 
+// remove if it appears in ghacksuser.js:
+user_pref("dom.private-attribution.submission.enabled", false);
+// enable adding search engines under Settings:
+user_pref("browser.urlbar.update2.engineAliasRefresh", true);
+
